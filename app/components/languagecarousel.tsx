@@ -1,80 +1,52 @@
-import Image from 'next/image'
-import Java from '@/public/icon-languages/java.svg'
-import Kotlin from '@/public/icon-languages/kotlin.svg'
-import ObjectiveC from '@/public/icon-languages/objectivec.svg'
-import Swift from '@/public/icon-languages/swift.svg'
-import Dart from '@/public/icon-languages/dart.svg'
-import Go from '@/public/icon-languages/go.svg'
-import JavaScript from '@/public/icon-languages/javascript.svg'
-import TypeScript from '@/public/icon-languages/typescript.svg'
-import PHP from '@/public/icon-languages/php.svg'
-import HTML5 from '@/public/icon-languages/html5.svg'
-import CSS3 from '@/public/icon-languages/css3.svg'
-import SASS from '@/public/icon-languages/sass.svg'
-import TailwindCSS from '@/public/icon-languages/tailwindcss.svg'
-
-import JavaOriginalIcon from "react-devicons/java/plain";
+import JavaIcon from "react-devicons/java/plain-wordmark";
+import KotlinIcon from "react-devicons/kotlin/plain-wordmark";
+import ObjectiveCIcon from "react-devicons/objectivec/plain";
+import SwiftIcon from "react-devicons/swift/plain-wordmark";
+import DartIcon from "react-devicons/dart/plain-wordmark";
+import GoIcon from "react-devicons/go/original-wordmark";
+import PhpIcon from "react-devicons/php/plain";
+import JavaScriptIcon from "react-devicons/javascript/plain";
+import TypeScriptIcon from "react-devicons/typescript/plain";
+import Html5Icon from "react-devicons/html5/plain-wordmark";
+import Css3Icon from "react-devicons/css3/plain-wordmark";
+import SassIcon from "react-devicons/sass/original";
+import TailwindCssIcon from "react-devicons/tailwindcss/plain-wordmark";
 
 export default function LogoCarousel() {
 
+    const color = "#9ca3af"
+    const size = "4em"
+
     const logos = [
-        {
-            alt: 'Java', src: Java
-        },
-        {
-            alt: 'Kotlin', src: Kotlin
-        },
-        {
-            alt: 'Objective-C', src: ObjectiveC
-        },
-        {
-            alt: 'Swift', src: Swift
-        },
-        {
-            alt: 'Dart', src: Dart
-        },
-        {
-            alt: 'Go', src: Go
-        },
-        {
-            alt: 'JavaScript', src: JavaScript
-        },
-        {
-            alt: 'TypeScript', src: TypeScript
-        },
-        {
-            alt: 'PHP', src: PHP
-        },
-        {
-            alt: 'HTML5', src: HTML5
-        },
-        {
-            alt: 'CSS3', src: CSS3
-        },
-        {
-            alt: 'SASS', src: SASS
-        },
-        {
-            alt: 'Tailwind CSS', src: TailwindCSS
-        },
+        {src: <JavaIcon color={color} size={size}/>},
+        {src: <KotlinIcon color={color} size={size}/>},
+        {src: <ObjectiveCIcon color={color} size={size}/>},
+        {src: <SwiftIcon color={color} size={size}/>},
+        {src: <DartIcon color={color} size={size}/>},
+        {src: <GoIcon color={color} size={size}/>},
+        {src: <PhpIcon color={color} size={size}/>},
+        {src: <JavaScriptIcon color={color} size={size}/>},
+        {src: <TypeScriptIcon color={color} size={size}/>},
+        {src: <Html5Icon color={color} size={size}/>},
+        {src: <Css3Icon color={color} size={size}/>},
+        {src: <SassIcon color={color} size={size}/>},
+        {src: <TailwindCssIcon color={color} size={size}/>},
     ]
 
     return (
         <div
-            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            className="w-full inline-flex flex-nowrap">
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                 {logos.map((logo, index) => (
                     <li key={index}>
-                        {/*<Image  src={logo.src} alt={logo.alt} />*/}
-                        <JavaOriginalIcon color="white"/>
+                        {logo.src}
                     </li>
                 ))}
             </ul>
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
                 {logos.map((logo, index) => (
                     <li key={index}>
-                        {/*<Image src={logo.src} alt={logo.alt} />*/}
-                        <JavaOriginalIcon color="white"/>
+                        {logo.src}
                     </li>
                 ))}
             </ul>
