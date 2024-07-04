@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import {Jura} from "next/font/google";
+import {
+    Alumni_Sans,
+    AR_One_Sans,
+    IBM_Plex_Mono,
+    IBM_Plex_Sans,
+    Jura, Noto_Sans, Open_Sans,
+    Public_Sans,
+    Sansita,
+    Tenor_Sans
+} from "next/font/google";
 import "./globals.css";
-import {ThemeModeScript} from "flowbite-react";
 import MyNavbar from "@/app/components/navbar";
 
-const jura = Jura({
+const jura = Open_Sans({
     weight: '400',
     subsets: ['latin'],
 })
@@ -22,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <ThemeModeScript />
       </head>
       <body className={jura.className}>
           <MyNavbar/>
