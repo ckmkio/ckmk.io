@@ -1,24 +1,17 @@
-import {Button, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle} from "flowbite-react";
+import {Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle} from "flowbite-react";
 import Link from "next/link";
-import GithubIcon from "react-devicons/github/original";
-import LinkedInIcon from "react-devicons/linkedin/plain";
 
 export default function MyNavbar() {
     return (
-        <Navbar className="bg-black">
-            <NavbarToggle className="mr-3 h-6 sm:h-9"/>
-            <NavbarCollapse className="center">
-                <NavbarLink className="text-gray-300" as={Link} href="/">Home</NavbarLink>
-                <NavbarLink className="text-gray-300" as={Link} href="/projects">Projects</NavbarLink>
+        <Navbar className="bg-slate-800">
+            <NavbarBrand>
+                <span className="whitespace-nowrap text-xl text-slate-300">Kelvin Cheong&#39;s Portfolio</span>
+            </NavbarBrand>
+            <NavbarToggle className="mr-3 h-6 sm:h-9" />
+            <NavbarCollapse>
+                <NavbarLink className="text-slate-300" as={Link} href="/home">About me</NavbarLink>
+                <NavbarLink className="text-slate-300" as={Link} href="/projects">Projects</NavbarLink>
             </NavbarCollapse>
-            <div className="flex flex-wrap">
-                <Button className="bg-black" as={Link} href="https://github.com/ckmkio">
-                    <GithubIcon size="2em" color="white"/>
-                </Button>
-                <Button className="bg-black" as={Link} href="https://www.linkedin.com/in/ckmkio/">
-                    <LinkedInIcon size="2em" color="white"/>
-                </Button>
-            </div>
         </Navbar>
-);
+    );
 }
