@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MyNavbar() {
     return (
-        <Navbar className="bg-black">
+        <Navbar className="bg-slate-800">
             <NavbarBrand>
                 <span className="whitespace-nowrap text-xl text-gray-300">ckmk.io</span>
             </NavbarBrand>
