@@ -24,18 +24,18 @@ export default function Home() {
               Doki {'>'} Fitbit {'>'} Google.
           </div>
 
-          <div className="mt-8">
-              <CareerTimeline/>
-          </div>
-
           <div
-              className="mt-16 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]">
+              className="mt-8 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]">
               <LogoCarousel/>
           </div>
 
           <div
-              className="mt-8 mb-16 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]">
+              className="mt-8 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]">
               <FrameworkCarousel/>
+          </div>
+
+          <div className="mt-8 mb-16">
+              <CareerTimeline/>
           </div>
       </div>
   );
