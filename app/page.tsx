@@ -15,7 +15,7 @@ export default function Home() {
               rounded>
 
               <div className="text-[32px] font-semibold uppercase text-gray-700">Kelvin Cheong</div>
-              <div className="text-[48px] font-semibold uppercase text-gray-700">Senior Software Enginner</div>
+              <div className="text-[48px] font-semibold uppercase text-gray-700">Senior Software Engineer</div>
           </Avatar>
 
           <div className="mt-8 text-xl font-normal text-gray-700">
