@@ -33,8 +33,8 @@ export default function RootLayout({
       </head>
       <body className={jura.className}>
           <MyNavbar/>
-          <div className="container mx-auto">
-              {children}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                  {children}
           </div>
       </body>
     </html>
