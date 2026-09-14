@@ -198,8 +198,9 @@ button {
   overflow: hidden;
 }
 .panel__head { flex: none; padding: 15px 16px 11px; }
-.panel__body { flex: 1; min-height: 0; overflow-y: auto;
-               overscroll-behavior: contain; padding: 0 16px 16px; }
+.panel__body { flex: 1; min-height: 0; padding: 0 16px 16px; }
+
+.projects-panel .panel__body { overflow-y: auto; overscroll-behavior: contain; }
 
 .well {
   background: var(--fill-faint);
@@ -401,7 +402,25 @@ button {
 
 .timeline-panel .panel__body { display: flex; flex-direction: column; gap: 16px; }
 
+.timeline-rail {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 24px;
+  list-style: none;
+}
+
+.timeline-rail::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 5px;
+  width: 1px;
+  background: var(--divider);
+}
+
 .timeline-entry {
+  position: relative;
   padding: 14px 4px;
 }
 .timeline-entry:first-child { padding-top: 0; }
@@ -413,6 +432,17 @@ button {
   gap: 8px;
   align-items: baseline;
   margin-bottom: 4px;
+}
+
+.timeline-entry__marker {
+  flex: none;
+  align-self: center;
+  width: 11px;
+  height: 11px;
+  margin-left: -28px;
+  border-radius: 50%;
+  background: var(--bg-raised);
+  border: 2px solid var(--accent);
 }
 
 .timeline-entry__dates {
